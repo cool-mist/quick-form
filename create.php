@@ -14,7 +14,14 @@
 	
 	//
 	*/
-	print_r($_POST['data']);
+	$data=$_POST['data'];
+	foreach($data as $q=>$w){
+		echo $q."<br />";
+		foreach($w as $e=>$r){
+			echo $e.":".$r."<br \>";
+		}
+		echo "<br />";
+	}
 	
 
 ?>
