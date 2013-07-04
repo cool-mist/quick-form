@@ -5,12 +5,16 @@
 	$formdata=unserialize($f);
 	$form=array();
 	
-	foreach($formdata as $q=>$w){
-		for($e=1;$e<=$w;++$e){
-			array_push($form,)		
-		}
-	}
+	/*
 	
+		$form = array(1=>array("type" => "asdsad" name"=>"asd",...),2=>array(),....)
+	
+	
+	
+	
+	//
+	*/
+	print_r($_POST['data']);
 	
 
 ?>

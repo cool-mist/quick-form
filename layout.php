@@ -1,9 +1,6 @@
 <?php	
 	/*
-	$name+number+l --> Label 
-	$name+number+n --> Name
-	$name+number+i --> Id
-	$name+number+v --> Value
+	
 	Also Pass form from here .. done
 	Layout specifier Array ==> Select Field (1 -- n) is order[] .. done
 
@@ -35,10 +32,10 @@
 		echo "<div id='dispall' >";
 		foreach($form as $e => $c){
 			for($x=0;$x<$c;++$x){
-				echo "<label>".$s++.") ".$e."No.".($x+1)."<label/><input type='text' name='".$e.($x+1).'l'. "' placeholder = 'Label for this field ' />";	
-				echo "<input type='text' name='".$e.($x+1).'n'."' placeholder = 'Name of this field' />";
-				echo "<input type='text' name='".$e.($x+1).'i'."' placeholder = 'Id for this field' />";
-				echo "<input type='text' name='".$e.($x+1).'v'."' placeholder = 'Value of this field' /><br />";
+				echo "<label>".$s++.") ".$e."No.".($x+1)."<label/><input type='text' name='"."data"."[".$e.$x."]"."[label]". "' placeholder = 'Label for this field ' />";	
+				echo "<input type='text' name='"."data"."[".$e.$x."]"."[name]"."' placeholder = 'Name of this field' />";
+				echo "<input type='text' name='"."data"."[".$e.$x."]"."[id]"."' placeholder = 'Id for this field' />";
+				echo "<input type='text' name='"."data"."[".$e.$x."]"."[value]"."' placeholder = 'Value of this field' /><br />";
 			}
 		echo "<br />";
 		}
