@@ -1,11 +1,4 @@
 <?php
-	if(isset($_POST['submit'])){
-		$ele=$_POST['elements'];
-		$num=$_POST['num'];
-		$c=implode(',',$ele);
-		if($c == "") {echo "Select Atleast one ";}
-	}
-
 
 ?>
 <html>
@@ -18,7 +11,7 @@
 	</head>
 	
 	<body>
-		<form action="<? echo $_SERVER['PHP_SELF']; ?>" method="post" >
+		<form action="layout.php" method="post" >
 			<label>Text</label><input type="checkbox"  onchange="showoncheck(this)" value = "text" name="elements[]" />
 				<input type="number" onchange="checknum(this)" class="hidden" id="text" name = 'num[]' value="0" />
 					<span class='error' id="etext">Must be greater than 0</span>
