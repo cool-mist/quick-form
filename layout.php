@@ -4,16 +4,15 @@
 	Also Pass form from here .. done
 	Layout specifier Array ==> Select Field (1 -- n) is order[] .. done
 
-*/
-
-
+*/	
 
 		$ele=$_POST['elements'];
 		
 		 // Check empty
 		if(count($ele) == 0) 
-		{
-			header("Location: index.php");
+		{  echo "<html><meta http-equiv='refresh' content='3; url = javascript:history.go(-1)'></html>"; 
+			echo "<span class='error'>You must select atleast one box..You will be redirected. Or follow <a href='javascript:history.go(-1)'>this link</a> to correct it</span><hr />";
+			exit;
 		}		
 		
 		$num=$_POST['num'];
@@ -55,7 +54,7 @@
 	echo "</div>";
 	echo "<input type='hidden' name= 'formdata' value=" . serialize($form) . "/>";
 	echo "<input type='submit' value='Create' name= 'create' />";
-	echo "</form>";
+	echo "</form></body></html>";
 		
 
 ?>
