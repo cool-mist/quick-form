@@ -24,12 +24,7 @@
 	
 	
 	
-	//
 	*/
-	//echo $rowata['text0']."<br />";
-	//print_r($formdata);
-	//echo "<br /><br />";
-	//print_r($rowata);echo "<br /><br />";
 	
 	foreach($formdata as $type=>$count) {
 		
@@ -46,7 +41,6 @@
 	usort($form, function($a, $b) {
     	return $a['position'] - $b['position'];
 	});
-	//print_r($form);
 	//----------------------------------Create HTML Source From $form array ---------------------------------//
 	
 	/* Sample
