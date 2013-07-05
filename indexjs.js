@@ -23,15 +23,35 @@ function checknum(inp){
 
 $(document).ready(function (){
 	$("#submit").hide();
+	$("#one").css("visibility","hidden");	
 	$("label").click(function (){
 		$(this).css("color","green").slideUp(1000).slideDown(1000);
 	});
-	$("#chk").click(function ()
+	$("input").click(function ()
 	{
-		if ( ($("#etext").css("visibility") == "hidden") && ($("#eradio").css("visibility") == "hidden") && ($("#echeckbox").css("visibility") == "hidden") 
-		&& ($("#etextarea").css("visibility") == "hidden") ) {
+		if( ($("#input_text").css("visibility") == "hidden") && ($("#input_radio").css("visibility") == "hidden") && ($("#input_checkbox").css("visibility") == "hidden") 
+		&& ($("#textarea_").css("visibility") == "hidden") && ($("#input_password").css("visibility") == "hidden" )
+		&& ($("#input_email").css("visibility") == "hidden" ) && ($("#input_date").css("visibility") == "hidden" )
+		
+		 )
+		{
+			$("#one").css("visibility","visible");	
+		}
+		else{
+			$("#one").css("visibility","hidden");	
+		}		
+		
+		if ( ($("#einput_text").css("visibility") == "hidden") && ($("#einput_radio").css("visibility") == "hidden") && ($("#einput_checkbox").css("visibility") == "hidden") 
+		&& ($("#etextarea_").css("visibility") == "hidden") && ($("#einput_password").css("visibility") == "hidden" ) 
+		&& ($("#one").css("visibility") == "hidden" ) && ($("#einput_email").css("visibility") == "hidden" ) && ($("#einput_date").css("visibility") == "hidden" )
+		
+		
+		){
 			$("#submit").show();	
-			$("#chk").hide();	
-		}	
+				
+		}else{
+		
+		$("#submit").hide();}	
 	});
+	
 });

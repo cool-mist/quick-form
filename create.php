@@ -34,7 +34,8 @@
 	foreach($formdata as $type=>$count) {
 		
 		for($q=0;$q<$count;$q++){
-			$row['type']=$type;
+			$row['tag']=explode('_',$type)[0];
+			$row['type']=explode('_',$type)[1];
 			$row['content']=$rowata[$type.$q];
 			$row['position']=$order[$w];
 			$w++;
@@ -110,21 +111,22 @@
         )
 
 )*/
-
+	
 	echo "<html><head><title></title></head>\n\n";
-	echo "<body>\n\n";
+	echo "<body><div id='form'>\n\n";
 	echo "\t<form action=\"\" method=\"\" >\n\t\t";
 	foreach($form as $a=>$input){
+			$tag=$input['tag'];
 			$type=$input['type'];
 			$label=$input['content']['label'];
 			$name=$input['content']['name'];
 			$id=$input['content']['id'];
 			$value=$input['content']['value'];
-			echo "<label for = '".$name."'>".$label."</label>\n\n\t\t\t";
-			echo "<input type= '".$type."' name='".$name."' id='".$id."' value= '".$value."' /><br />\n\t\t";
+			echo "<label for = '".$name."'>".$label."</label>\n\t\t\t";
+			echo "<".$tag." type= '".$type."' name='".$name."' id='".$id."' value= '".$value."' ></".$tag."><br />\n\n\t\t";
 		}	
-	
-	echo "</form>\n\n</body>\n\n</html>";
+	echo"<input type='submit' />\n\n";
+	echo "</form></div>\n\n</body>\n\n</html>";
 
 
 	

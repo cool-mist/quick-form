@@ -10,8 +10,8 @@
 		
 		 // Check empty
 		if(count($ele) == 0) 
-		{  echo "<html><meta http-equiv='refresh' content='3; url = javascript:history.go(-1)'></html>"; 
-			echo "<span class='error'>You must select atleast one box..You will be redirected. Or follow <a href='javascript:history.go(-1)'>this link</a> to correct it</span><hr />";
+		{  echo "<html><meta http-equiv='refresh' content='0; url = javascript:history.go(-1)'></html>"; 
+			//echo "<span class='error'>You must select atleast one box..You will be redirected. Or follow <a href='javascript:history.go(-1)'>this link</a> to correct it</span><hr />";
 			exit;
 		}		
 		
@@ -19,7 +19,7 @@
 		$form=array();
 		$i=0;$s=1;
 		
-		for($n=0;$n<4;++$n){
+		for($n=0;$n<count($num);++$n){
 			if(!($num[$n]<=0) ){
 				$form[$ele[$i]]=$num[$n];
 				$i=$i+1;
