@@ -25,10 +25,12 @@
 	
 	
 	*/
-	$t=explode('_',$type);
+	
+	
 	foreach($formdata as $type=>$count) {
 		
 		for($q=0;$q<$count;$q++){
+			$t=explode('_',$type);
 			$row['tag']=$t[0];
 			$row['type']=$t[1];
 			$row['content']=$rowata[$type.$q];
