@@ -1,0 +1,19 @@
+label{
+	float:left;
+	width:10em;
+	text-align: right;
+}
+#form{
+	border:1px solid black;
+	border-radius:30px;
+	margin:0 auto;
+	width:500px;
+}
+input{
+	border-radius:25px;
+}
+input[type='submit']{
+	width:15em;
+	margin-left:50%;
+	
+}

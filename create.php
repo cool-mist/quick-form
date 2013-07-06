@@ -108,7 +108,7 @@
 
 )*/
 	
-	echo "<html><head><title></title></head>\n\n";
+	echo "<html><head><title></title><link rel='stylesheet' charset='utf-8' type='text/css' href='formcss.css' /></head>\n\n";
 	echo "<body><div id='form'>\n\n";
 	echo "\t<form action=\"\" method=\"\" >\n\t\t";
 	foreach($form as $a=>$input){
@@ -119,7 +119,10 @@
 			$id=$input['content']['id'];
 			$value=$input['content']['value'];
 			echo "<label for = '".$name."'>".$label."</label>\n\t\t\t";
-			echo "<".$tag." type= '".$type."' name='".$name."' id='".$id."' value= '".$value."' ></".$tag."><br />\n\n\t\t";
+			echo "<".$tag." type= '".$type."' name='".$name."' id='".$id."' value= '".$value."' ";
+			
+			if(!($tag== 'input')) {echo "></".$tag."><br />\n\n";}
+			else echo "/><br /><br />\n\n";
 		}	
 	echo"<input type='submit' />\n\n";
 	echo "</form></div>\n\n</body>\n\n</html>";

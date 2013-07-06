@@ -1,7 +1,62 @@
-.hidden{
-	visibility: hidden;
+@keyframes sp{
+	0% {width: 0em;}
+	100% {width: 20em;}
+}
+@-webkit-keyframes sp{
+	0% {width: 0em;}
+	100% {width: 5em;}
+}
+#one{
+visibility: visible;}
+label{
+	width:15em;
+	float:left;
+	text-align:right;
+}
+span{
+	width:30em;
+	text-align: center;
+	float:right;
+	border-radius:5px;
+	border:1px solid grey;
+	background-color: lightgrey;
+	color:grey
 }
 .error{
-	visibility: hidden;
-	color: red;	
+	display: inline;
+	background-color: lightpink;
+	border-right-color: transparent;
+	border-radius:2em 0em 0em 4em;
+		
+}
+input[type='text']{
+	float:left;
+	width:20em;
+	text-align: center;
+}
+input[type="checkbox"]{
+	background-color: red;
+	border-color: transparent;
+}
+input[type='number']{
+	border-radius:25px;
+}
+input[type="submit"],[type="button"]{
+	width:15em;
+	display: none;
+	margin-left:15em;
+	border-radius:20px;
+	background-color: greenyellow;
+	float:left;
+	
+}
+.center{
+	margin:auto;
+	border-radius:25px;
+	height:500px;
+	width:1000px;
+	left:150;
+	color:black;
+	background-color: #DBDBDB;
+	
 }

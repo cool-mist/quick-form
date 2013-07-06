@@ -25,36 +25,38 @@
 				$i=$i+1;
 			}		
 		}
-		echo "<html><head><title>Layout</title></head>";
-		echo "<body>";
-		echo "<form method='post' action='create.php' />";
-		echo "<div id='dispall' >";
+		foreach($form as $e=> $c){
+			$count+=$c;		
+		}	
+		
+		echo "<html><head><title>Layout</title><link rel='stylesheet' charset='utf-8' type='text/css' href='stylesheet2.css' /></head>";
+		echo "<div class = 'center' ><body>\n";
+		echo "<form method='post' action='create.php' >";
+		
+			
+		
 		foreach($form as $e => $c){
 			for($x=0;$x<$c;++$x){
-				echo "<label>".$s++.") ".$e."No.".($x+1)."<label/><input type='text' name='"."data"."[".$e.$x."]"."[label]". "' placeholder = 'Label for this field ' />";	
-				echo "<input type='text' name='"."data"."[".$e.$x."]"."[name]"."' placeholder = 'Name of this field' />";
-				echo "<input type='text' name='"."data"."[".$e.$x."]"."[id]"."' placeholder = 'Id for this field' />";
-				echo "<input type='text' name='"."data"."[".$e.$x."]"."[value]"."' placeholder = 'Value of this field' /><br />";
+				echo "<div class='dispall' >\n";
+				echo "<label>".$s.") ".$e."No.".($x+1)."<label/><br /><input type='text' name='"."data"."[".$e.$x."]"."[label]". "' placeholder = 'Label for this field ' />";	
+				echo "<br /><input type='text' name='"."data"."[".$e.$x."]"."[name]"."' placeholder = 'Name of this field' />";
+				echo "<br /><input type='text' name='"."data"."[".$e.$x."]"."[id]"."' placeholder = 'Id for this field' />";
+				echo "<br /><input type='text' name='"."data"."[".$e.$x."]"."[value]"."' placeholder = 'Value of this field' />";
+				echo "<br /><select name='order[]'>";
+				for($l=1;$l<=$count;++$l){
+						echo "<option value='".$l."' ";
+						if($l==$s) echo "selected";
+						echo " >".$l."</option>";				
+				}
+				echo "</select>";
+				echo "</div>\n";
+				$s++;
 			}
-		echo "<br />";
+		
 		}
-	echo "</div><div id='specify' >";
-	for($l=1;$l<$s;++$l){
-		echo "<label>".$l."</label> -> <select name='order[]' >";
-		for($v=1;$v<$s;++$v){
-			echo "<option value='".$v."' ";
-			if($v==$l) echo "selected";
-			echo " >".$v."</option>";		
-		}
-		echo "</select>&nbsp;";	
-		if($l % 3==0) echo "<br />";
-	}
-	
-	
-	echo "</div>";
 	echo "<input type='hidden' name= 'formdata' value=" . serialize($form) . "/>";
-	echo "<input type='submit' value='Create' name= 'create' />";
-	echo "</form></body></html>";
+	echo "<input type='submit' value='Create' name= 'create'/>";
+	echo "</form></body></div></html>";
 		
 
 ?>
