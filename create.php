@@ -107,7 +107,6 @@
         )
 
 )*/
-	
 	echo "<html><head><title></title><link rel='stylesheet' charset='utf-8' type='text/css' href='formcss.css' /></head>\n\n";
 	echo "<body><div id='form'>\n\n";
 	echo "\t<form action=\"\" method=\"\" >\n\t\t";
@@ -116,13 +115,35 @@
 			$type=$input['type'];
 			$label=$input['content']['label'];
 			$name=$input['content']['name'];
+			if($name == '' ) $name = $type;
 			$id=$input['content']['id'];
 			$value=$input['content']['value'];
+			$options=$input['content']['option'];
 			echo "<label for = '".$name."'>".$label."</label>\n\t\t\t";
+		
+			if($options){
+				 if($type=='radiog' ) {
+					 for($o=1;$o<=$options;++$o) {
+					 	echo "<input type='radio' name='".$name."' value='opt".$o."' />opt".$o."\n\t\t\t";
+					 	if($o % 2 == 0) echo "\n\t\t\t<br />\n\t\t\t";
+					 }
+					echo "<br />\n\t\t";
+				 }
+				 else{
+				 	echo "<select name = '".$name."'>\n\t\t\t\t";
+				 	for($o=1;$o<=$options;++$o){
+						echo "<option value='opt".$o."'>Option".$o."</option>\n\t\t\t\t";				 	
+				 	}
+				 	echo "</select><br /><br />\n\n";
+				 }
+			}
+			else{
+			
 			echo "<".$tag." type= '".$type."' name='".$name."' id='".$id."' value= '".$value."' ";
 			
 			if(!($tag== 'input')) {echo "></".$tag."><br />\n\n";}
 			else echo "/><br /><br />\n\n";
+			}
 		}	
 	echo"<input type='submit' />\n\n";
 	echo "</form></div>\n\n</body>\n\n</html>";

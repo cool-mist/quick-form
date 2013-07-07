@@ -1,7 +1,7 @@
 function showoncheck(inp){
 	id=inp.value;
 	if(inp.checked){
-			$("#"+id).fadeIn(500);	
+			$("#"+id).fadeIn(500);
 		document.getElementById(id).value="1";	
 		
 	}else{

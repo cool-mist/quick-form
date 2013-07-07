@@ -10,10 +10,19 @@ label{
 	width:500px;
 }
 input{
+	text-align: center;
 	border-radius:25px;
 }
 input[type='submit']{
 	width:15em;
 	margin-left:50%;
 	
+}
+textarea{
+	text-align: center;
+	border-radius:25px;
+}
+select{
+	text-align: center;
+	border-radius:25px;
 }

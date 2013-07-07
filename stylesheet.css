@@ -51,12 +51,13 @@ input[type="submit"],[type="button"]{
 	
 }
 .center{
+	background-color: whitesmoke;
 	margin:auto;
 	border-radius:25px;
 	height:500px;
 	width:1000px;
 	left:150;
 	color:black;
-	background-color: #DBDBDB;
+	
 	
 }

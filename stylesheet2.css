@@ -1,27 +1,47 @@
 .center{
 	margin:auto;
 	border-radius:25px;
-	height:503px;
-	width:1000px;
+	width:50em;
 	left:150;
 	color:black;
 	background-color: #DBDBDB;
-	column-count:3;
-	-webkit-column-count:3;
+	column-count:auto;
+	-webkit-column-count:auto;
 	
 }
 .dispall{
+	opacity: 0.6;
 	border:1px solid black;
+	height:170px;
 	border-radius:25px;
 	width:15em;
-	height:10em;
+	float:left;
 	text-align: center;
-	margin:5px;
+	margin:10px;
 }
+.dispall:active,.dispall:hover{
+	opacity: 1;
+}
+input{
+	border-radius:1em 4em 1em 4em;
+	border : 1px solid blue;
+	text-align: center;
+}
+select{
+	border-radius:1em 4em 1em 4em;
+	border : 1px solid blue;
+	text-align: center;
+}
+
 input[type="submit"],[type="button"]{
-	width:15em;
+	width:58em;
+	margin:10px;
+	height:5em;
 	border-radius:20px;
 	background-color: greenyellow;
 	float:left;
-	
+	box-shadow:2px 2px 2px;
+}
+input[type="submit"]:active,[type="button"]:active{
+	border:none;
 }

@@ -33,9 +33,17 @@
 				<input type="number"  class="hidden" id="input_radio" name = 'num[]' value="0" />
 					<span class='error' id="einput_radio">Must be greater than 0</span>
 						<br /><br />
+			<label>Radio Group</label><input type='checkbox'  value = 'input_radiog' name="elements[]" />
+				<input type="number"  class="hidden" id="input_radiog" name = 'num[]' value="0" />
+					<span class='error' id="einput_radiog">Must be greater than 0</span>
+						<br /><br />
 			<label>Checkbox</label><input type='checkbox'  value = 'input_checkbox' name="elements[]" />
 				<input type="number"  class="hidden" id="input_checkbox" name = 'num[]' value="0" />
 					<span class='error' id="einput_checkbox">Must be greater than 0</span>
+						<br /><br />
+			<label>Select group</label><input type='checkbox'  value = 'input_selectg' name="elements[]" />
+				<input type="number"  class="hidden" id="input_selectg" name = 'num[]' value="0" />
+					<span class='error' id="einput_selectg">Must be greater than 0</span>
 						<br /><br />
 			<label>Password</label><input type='checkbox'  value = 'input_password' name="elements[]" />
 				<input type="number"  class="hidden" id="input_password" name = 'num[]' value="0" />
