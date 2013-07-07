@@ -107,9 +107,11 @@
         )
 
 )*/
+	ob_start();
 	echo "<html><head><title></title><link rel='stylesheet' charset='utf-8' type='text/css' href='formcss.css' /></head>\n\n";
 	echo "<body><div id='form'>\n\n";
-	echo "\t<form action=\"\" method=\"\" >\n\t\t";
+	echo "\t";
+	echo "<form action=\"\" method=\"\" >\n\t\t";
 	foreach($form as $a=>$input){
 			$tag=$input['tag'];
 			$type=$input['type'];
@@ -145,9 +147,19 @@
 			else echo "/><br /><br />\n\n";
 			}
 		}	
-	echo"<input type='submit' />\n\n";
-	echo "</form></div>\n\n</body>\n\n</html>";
-
-
+	echo"\t\t<input type='submit' />\n\n";
+	echo "</form>";
 	
+	echo "\n\n\t\t</div>\n\n";
+	$html=ob_get_clean();
+	
+	
+	echo $html;
+	echo $start.$end;
+	$end = strpos($html,"</div");
+	$start = strpos($html,"<form");
+	$html=substr($html, $start,($end-$start));
+	echo "<br /><br /><div id='op'><h1>Source Code</h1>";
+	echo "<textarea id='html' readonly>".htmlspecialchars($html)."</textarea></div>";
+	echo "</body>\n\n</html>";
 ?>

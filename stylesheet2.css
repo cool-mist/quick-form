@@ -12,7 +12,7 @@
 .dispall{
 	opacity: 0.6;
 	border:1px solid black;
-	height:170px;
+	height:30%;
 	border-radius:25px;
 	width:15em;
 	float:left;
@@ -34,7 +34,7 @@ select{
 }
 
 input[type="submit"],[type="button"]{
-	width:58em;
+	width:100%;
 	margin:10px;
 	height:5em;
 	border-radius:20px;

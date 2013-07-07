@@ -12,7 +12,8 @@ function showoncheck(inp){
 }
 function checknum(inp){
 	id='e'+inp.id;
-	if (document.getElementById(inp.id).value<=0) {
+	var v=document.getElementById(inp.id).value;
+	if (v <= 0 || !$.isNumeric(v)) {
 		$("#"+id).fadeIn(500);
 		}
 	else{
@@ -20,15 +21,23 @@ function checknum(inp){
 	}
 }
 
-
 //------------------------------------------Jquery------------------------------------------------------------------
 
 $(document).ready(function (){
 	$("#submit").fadeOut(0);
 	$("span[class='error']").fadeOut(0);
 	$("input[type='number']").fadeOut(0);
-	$("input").click(function ()
-	{
+	$("input[type='number']").keyup(function(){
+			
+			checknum(this);
+			var visible = $('#form').find('span').filter(function(){
+   		if($(this).css('display') == 'block')   
+       	return $(this);
+			});
+			if( visible.length == 0 ) $("#submit").fadeIn(500);			
+			else$("#submit").fadeOut(500);		
+	});
+	$("input").click(function(){
 			if($(this).is(":checkbox") )
 				showoncheck(this);
 			else 
@@ -54,6 +63,7 @@ $(document).ready(function (){
 			
 	
 			//alert(jQuery("#form span[display=block]").length);
-	});
+});
+	
 	
 });
