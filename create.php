@@ -108,7 +108,7 @@
 
 )*/
 	ob_start();
-	echo "<html><head><title></title><link rel='stylesheet' charset='utf-8' type='text/css' href='formcss.css' /></head>\n\n";
+	echo "<html><head><title></title><link rel='stylesheet' charset='utf-8' type='text/css' href='formcss.css' />  	<img src='img/header.jpg' id='header'/>	</head>\n\n";
 	echo "<body><div id='form'>\n\n";
 	echo "<form action=\"\" method=\"\" >\n\n";
 	foreach($form as $a=>$input){
@@ -149,7 +149,7 @@
 	echo"\t\t<input type='submit' />\n\n";
 	echo "</form>";
 	
-	echo "\n\n\t\t</div>\n\n";
+	echo "\n\n</div>\n\n";
 	$html=ob_get_clean();
 	
 	
@@ -159,7 +159,7 @@
 	$start = strpos($html,"<div");
 	$html=substr($html, $start,($end-$start+7));
 	echo "<br /><br /><div id='op'><h1>Source Code</h1><br /><a href='download.php'>Click here</a> for the css<br />";
-	echo "<textarea id='html' readonly>".htmlspecialchars($html)."</textarea></div>";
+	echo "<textarea id='html' readonly onclick='this.focus();this.select()'>".htmlspecialchars($html)."</textarea></div>";
 	echo "</body>\n\n</html>";
 	
 ?>

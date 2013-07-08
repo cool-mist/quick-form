@@ -8,7 +8,7 @@
 	<script type="text/javascript" src='jquery.js' ></script>
 	<script type="text/javascript" src="indexjs.js" ></script>
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-  		
+  	<img src='img/header.jpg' id='header'/>	
 	</head>
 	
 	<body>

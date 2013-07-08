@@ -1,4 +1,7 @@
-.center{
+#header{
+	height:25%;
+	width: 100%;
+}.center{
 	margin:auto;
 	border-radius:25px;
 	width:50em;
