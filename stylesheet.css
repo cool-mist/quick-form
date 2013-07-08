@@ -1,47 +1,38 @@
-@keyframes sp{
-	0% {width: 0em;}
-	100% {width: 20em;}
+img{
+	height: 30px;
+	width: 30px;
+	float: left;
+	vertical-align:middle;
 }
-@-webkit-keyframes sp{
-	0% {width: 0em;}
-	100% {width: 5em;}
-}
-#one{
-visibility: visible;}
 label{
-	width:15em;
-	float:left;
-	text-align:right;
+	text-align: right;
+	margin:auto;
+	width: 50%;
 }
 span{
-	width:30em;
 	text-align: center;
-	float:right;
 	border-radius:5px;
 	border:1px solid grey;
 	background-color: lightgrey;
 	color:grey
 }
 .error{
-	display: inline;
+	width:100%;
 	background-color: lightpink;
 	border-right-color: transparent;
-	border-radius:2em 0em 0em 4em;
+	border-radius:2em 2em 2em 4em;
 		
 }
-input[type='text']{
-	float:left;
-	width:20em;
-	text-align: center;
-}
 input[type="checkbox"]{
+	vertical-align: middle;
 	background-color: red;
 	border-color: transparent;
 }
 input[type='number']{
+	width: 3em;
 	border-radius:25px;
 }
-input[type="submit"],[type="button"]{
+input[type="submit"]{
 	width:15em;
 	display: none;
 	margin-left:15em;
@@ -51,13 +42,25 @@ input[type="submit"],[type="button"]{
 	
 }
 .center{
-	background-color: whitesmoke;
 	margin:auto;
-	border-radius:25px;
-	height:500px;
-	width:1000px;
-	left:150;
-	color:black;
+	 width: 35em;  
+	 height: 20em;
+    border: solid 1px #aaa;  
+    text-align: center;       
+    line-height: 12px;  
+    overflow: hidden;
 	
 	
+}
+.fields{
+	opacity:0.5;
+	margin:5px;
+	width: 6em;  
+	height: 5em;  
+    border: solid 1px #ccc;  
+    display: inline-block;  
+    vertical-align: middle;
+	}
+.fields:hover{
+	opacity: 1.0;
 }

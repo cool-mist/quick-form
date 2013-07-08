@@ -6,64 +6,43 @@ function showoncheck(inp){
 		
 	}else{
 			$("#"+id).fadeOut(500);	
-	document.getElementById(id).value="0";
-	$("#e"+id).fadeOut(0);	
+	document.getElementById(id).value="0";	
 	}
 }
-function checknum(inp){
-	id='e'+inp.id;
-	var v=document.getElementById(inp.id).value;
-	if (v <= 0 || !$.isNumeric(v)) {
-		$("#"+id).fadeIn(500);
-		}
-	else{
-		$("#"+id).fadeOut(0);		
-	}
-}
-
 //------------------------------------------Jquery------------------------------------------------------------------
 
 $(document).ready(function (){
-	$("#submit").fadeOut(0);
-	$("span[class='error']").fadeOut(0);
-	$("input[type='number']").fadeOut(0);
+	$("#submit").hide();
+	$("span[class='error']").hide();
+	$("input[type='number']").hide();
+	
 	$("input[type='number']").keyup(function(){
 			
-			checknum(this);
-			var visible = $('#form').find('span').filter(function(){
-   		if($(this).css('display') == 'block')   
-       	return $(this);
-			});
-			if( visible.length == 0 ) $("#submit").fadeIn(500);			
-			else$("#submit").fadeOut(500);		
+			var checked=jQuery("#form input[type='checkbox']:checked").length;
+			
+			var zero = $('#form').find("input[type='number']").filter(function(){if($(this).val()<=0) return $(this);});
+			if(zero.length == 9-checked) $('#zero').hide();
+			else $('#zero').show();               //  Show/Hide "Value <=0" Error
+			
+			if (jQuery("#form span:hidden").length == 2) $("#submit").show();
+			else $("#submit").hide();      // Show/Hide "Submit" button
+			
 	});
 	$("input").click(function(){
-			if($(this).is(":checkbox") )
-				showoncheck(this);
-			else 
-				checknum(this);
-			if(jQuery("#form input[type='checkbox']:checked").length == 0) {
-				$("#one").fadeIn(0);
-			}
-			else{
-				$("#one").fadeOut(0);
-			}
-			var visible = $('#form').find('span').filter(function(){
-   		if($(this).css('display') == 'block')   
-       	return $(this);
-			});
-			//alert(visible.length);
-			if( visible.length == 0 ) {
-				$("#submit").fadeIn(500);			
-			}
-			else{
-				
-				$("#submit").fadeOut(500);
-			}
+			if($(this).is(":checkbox") ) showoncheck(this);          //Show/Hide number field when checked
 			
-	
-			//alert(jQuery("#form span[display=block]").length);
-});
-	
+			var checked=jQuery("#form input[type='checkbox']:checked").length;	
+			if( !checked) $("#one").fadeIn(0);
+			else $("#one").fadeOut(0);                // Show/Hide "check atleast one" error
+			
+			var zero = $('#form').find("input[type='number']").filter(function(){if($(this).val()<=0) return $(this);});
+			if(zero.length == 9-checked) $('#zero').hide();
+			else $('#zero').show();               //  Show/Hide "Value <=0" Error
+			
+			if (jQuery("#form span:hidden").length == 2) $("#submit").show();
+			else $("#submit").hide();      // Show/Hide "Submit" button
+			
+			});
+		
 	
 });

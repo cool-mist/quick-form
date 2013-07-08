@@ -2,7 +2,7 @@
 	
 ?>
 <html>
-	<div class="center">
+	
 	<head><title>Form Builder</title>
 	<link rel="stylesheet" charset="utf-8" type="text/css" href="stylesheet.css" />
 	<script type="text/javascript" src='jquery.js' ></script>
@@ -12,56 +12,64 @@
 	</head>
 	
 	<body>
-	
-			
+		<div class='center'>
 		<form action="layout.php" method="post" id="form" >
-	
-			<br />
-			<label>Text</label><input type="checkbox"   value = "input_text" name="elements[]" />
-				<input type="number"  class="hidden" id="input_text" name = 'num[]' value="0" />
-					<span class='error' id="einput_text">Must be a number greater than 0</span>
-						<br /><br />
-			<label>Date</label><input type='checkbox'  value = 'input_date' name="elements[]" />
-				<input type="number"  class="hidden" id="input_date" name = 'num[]' value="0" />
-					<span class='error' id="einput_date">Must be a number greater than 0</span>
-						<br /><br />
-			<label>Email</label><input type='checkbox'  value = 'input_email' name="elements[]" />
-				<input type="number"  class="hidden" id="input_email" name = 'num[]' value="0" />
-					<span class='error' id="einput_email">Must be a number greater than 0</span>
-						<br /><br />
-			<label>Radio</label><input type='checkbox'  value = 'input_radio' name="elements[]" />
-				<input type="number"  class="hidden" id="input_radio" name = 'num[]' value="0" />
-					<span class='error' id="einput_radio">Must be a number greater than 0</span>
-						<br /><br />
-			<label>Radio Group</label><input type='checkbox'  value = 'input_radiog' name="elements[]" />
-				<input type="number"  class="hidden" id="input_radiog" name = 'num[]' value="0" />
-					<span class='error' id="einput_radiog">Must be a number greater than 0</span>
-						<br /><br />
-			<label>Checkbox</label><input type='checkbox'  value = 'input_checkbox' name="elements[]" />
-				<input type="number"  class="hidden" id="input_checkbox" name = 'num[]' value="0" />
-					<span class='error' id="einput_checkbox">Must be a number greater than 0</span>
-						<br /><br />
-			<label>Select group</label><input type='checkbox'  value = 'input_selectg' name="elements[]" />
-				<input type="number"  class="hidden" id="input_selectg" name = 'num[]' value="0" />
-					<span class='error' id="einput_selectg">Must be a number greater than 0</span>
-						<br /><br />
-			<label>Password</label><input type='checkbox'  value = 'input_password' name="elements[]" />
-				<input type="number"  class="hidden" id="input_password" name = 'num[]' value="0" />
-					<span class='error' id="einput_password">Must be a number greater than 0</span>
-						<br /><br />
-			<label>Text-Area</label><input type='checkbox'  value = 'textarea_' name="elements[]" />
-				<input type="number"  class="hidden" id="textarea_" name = 'num[]' value="0" />
-					<span class='error' id="etextarea_">Must be a number greater than 0</span>
-						<br /><br />
-			
-			<span class="error" id="one">Select atleast one field</span><br />
+
+			<div class='fields' >
+			<label><img src='img/text.jpg' />Text</label><br /><input type="checkbox"   value = "input_text" name="elements[]" /><br />
+				<input type="number"  class="hidden" id="input_text" name = 'num[]' value="0" /><br />
+					
+						</div>
+			<div class='fields' >
+			<label><img src='img/date.jpg' />Date</label><br /><input type='checkbox'  value = 'input_date' name="elements[]" /><br />
+				<input type="number"  class="hidden" id="input_date" name = 'num[]' value="0" /><br />
+
+						</div>
+			<div class='fields' >
+			<label><img src='img/email.jpg' />Email</label><br /><input type='checkbox'  value = 'input_email' name="elements[]" /><br />
+				<input type="number"  class="hidden" id="input_email" name = 'num[]' value="0" /><br />
+
+						</div>
+			<div class='fields' >
+			<label><img src='img/radio.jpg' />Radio</label><br /><input type='checkbox'  value = 'input_radio' name="elements[]" /><br />
+				<input type="number"  class="hidden" id="input_radio" name = 'num[]' value="0" /><br />
+
+						</div>
+			<div class='fields' >
+			<label><img src='img/radiog.jpg' />Radio Group</label><br /><input type='checkbox'  value = 'input_radiog' name="elements[]" /><br />
+				<input type="number"  class="hidden" id="input_radiog" name = 'num[]' value="0" /><br />
+
+						</div>
+			<div class='fields' >
+			<label><img src='img/checkbox.jpg' />Checkbox</label><br /><input type='checkbox'  value = 'input_checkbox' name="elements[]" /><br />
+				<input type="number"  class="hidden" id="input_checkbox" name = 'num[]' value="0" /><br />
+
+						</div>
+			<div class='fields' >
+			<label><img src='img/selectg.jpg' />Select group</label><br /><input type='checkbox'  value = 'input_selectg' name="elements[]" /><br />
+				<input type="number"  class="hidden" id="input_selectg" name = 'num[]' value="0" /><br />
+
+						</div>
+			<div class='fields' >
+			<label><img src='img/password.jpg' />Password</label><br /><input type='checkbox'  value = 'input_password' name="elements[]" /><br />
+				<input type="number"  class="hidden" id="input_password" name = 'num[]' value="0" /><br />
+
+						</div>
+			<div class='fields' >
+			<label><img src='img/textarea.jpg' />Text-Area</label><br /><input type='checkbox'  value = 'textarea_' name="elements[]" /><br />
+				<input type="number"  class="hidden" id="textarea_" name = 'num[]' value="0" /><br />
+
+						</div>
+			<br /><span class="error" id="zero">Number Greater than 0 </span><br />
+			<br /><span class="error" id="one" >Select atleast one field</span><br /><br />
 			<input type = "submit" id="submit" name="submit" value='GO --> '/>
+			
 			
 		
 		
 		</form>
-
+		</div>
 		
 	</body>
-		</div>
+		
 </html>
