@@ -1,3 +1,6 @@
+body{
+	background-image: url('img/back.jpg') ;
+}
 img{
 	height: 30px;
 	width: 30px;
@@ -5,7 +8,7 @@ img{
 	vertical-align:middle;
 }
 #header{
-	height:25%;
+	height:30%;
 	width: 100%;
 }
 label{
@@ -22,15 +25,16 @@ span{
 	color:grey
 }
 .error{
-	height:10%;
-	background-color: lightpink;
-	border-right-color: transparent;
+	height:5%;
+	color:black;
+	border-color: transparent;
+	text-shadow:0px 1px 0px gray; 
+	background-color: lightgoldenrodyellow;;
+	
 		
 }
 input[type="checkbox"]{
-	vertical-align: middle;
-	background-color: red;
-	border-color: transparent;
+	
 }
 input[type='number']{
 	width: 3em;
@@ -46,10 +50,10 @@ input[type="submit"]{
 	
 }
 .center{
-	
+	color:black;
 	margin:auto;
 	 width: 35em;  
-	 height: 20em;
+	 height: 100%;
     border: solid 1px #aaa; 
     border-radius: 0em 0em 5em 3em; 
     text-align: center;       
@@ -75,6 +79,7 @@ input[type="submit"]{
   /* Good browsers */
   border-radius: 0em 0em 1em 3em; 
   opacity: 0.5;
+  background-color: lightgray;
 	margin:5px;
 	width: 6em;  
 	height: 5em;  

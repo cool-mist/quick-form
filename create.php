@@ -158,8 +158,10 @@
 	$end = strpos($html,"</div>");
 	$start = strpos($html,"<div");
 	$html=substr($html, $start,($end-$start+7));
-	echo "<br /><br /><div id='op'><h1>Source Code</h1><br /><a href='download.php'>Click here</a> for the css<br />";
-	echo "<textarea id='html' readonly onclick='this.focus();this.select()'>".htmlspecialchars($html)."</textarea></div>";
+	echo "<br /><a href='index.php' ><<< Return to Home Page to create a New form!</a><br /><div id='op'><h1>Source Code</h1><form action='download.php' method = 'post' ><button name='Download CSS' >Download CSS</button></form><br />";
+	echo "<textarea id='html' readonly onclick='this.focus();this.select()'>".htmlspecialchars($html)."</textarea>";
+	echo  "</div>";
+	
 	echo "</body>\n\n</html>";
 	
 ?>

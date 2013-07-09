@@ -36,17 +36,18 @@
 			
 		
 		foreach($form as $e => $c){
+			$eg=split('_', $e);
 			for($x=0;$x<$c;++$x){
 				echo "<div class='dispall' >\n";
-				echo "<label>".$s.") ".$e."No.".($x+1)."</label><br /><input type='text' name='"."data"."[".$e.$x."]"."[label]". "' placeholder = 'Label for this field ' />";	
+				echo "<label>". strtoupper($eg[1])." ". strtoupper($eg[0])."</label><br /><input type='text' name='"."data"."[".$e.$x."]"."[label]". "' placeholder = 'Label for this field ' />";	
 				echo "<br /><input type='text' name='"."data"."[".$e.$x."]"."[name]"."' placeholder = 'Name of this field' />";
 				echo "<br /><input type='text' name='"."data"."[".$e.$x."]"."[id]"."' placeholder = 'Id for this field' />";
 				echo "<br /><input type='text' name='"."data"."[".$e.$x."]"."[value]"."' placeholder = 'Value of this field' />";
 							
 				if($e[strlen($e)-1] == 'g'){
-					echo "<br /><input type='number' name = '"."data"."[".$e.$x."]"."[option]"."' placeholder = 'number of options' value = '2' />";				
+					echo "<br />Options :<input type='number' size='5px' name = '"."data"."[".$e.$x."]"."[option]"."' value = '2' />";				
 				}
-				echo "<br /><select name='order[]'>";
+				echo "<br />Position :<select name='order[]'>";
 				for($l=1;$l<=$count;++$l){
 						echo "<option value='".$l."' ";
 						if($l==$s) echo "selected";
@@ -60,7 +61,8 @@
 		}
 	echo "<input type='hidden' name= 'formdata' value=" . serialize($form) . "/>";
 	echo "<input type='submit' value='Create  > > > ' name= 'create'/>";
-	echo "</form></body></div></html>";
+	echo "</form>";
+	echo "</body></div><form action='index.php' method='post' /><button>Go Back ?!</button></form></html>";
 		
 
 ?>
