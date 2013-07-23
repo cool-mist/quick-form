@@ -14,6 +14,7 @@ function showoncheck(inp){
 
 $(document).ready(function (){
 	$("#submit").hide();
+	$("#loading").hide();
 	$("span[class='error']").hide();
 	$("input[type='number']").hide();
 	//$(".center").slideUp(0);
@@ -60,6 +61,10 @@ $(document).ready(function (){
 			
 			});
 		//----------------------
+	$("#submit").click(function () {
+		$("#submit").hide();
+		$("$loading").show();
 		
+	});
 	
 });

@@ -5,7 +5,7 @@
 	Layout specifier Array ==> Select Field (1 -- n) is order[] .. done
 
 */	
-
+		include 'access.php';
 		$ele=$_POST['elements'];
 		
 		 // Check empty
@@ -29,7 +29,9 @@
 			$count+=$c;		
 		}	
 		
-		echo "<html><head><title>Layout</title><link rel='stylesheet' charset='utf-8' type='text/css' href='stylesheet2.css' />  	<img src='img/header.jpg' id='header'/>	</head>";
+		echo "<html><head>";
+		include 'bar.php';		
+		echo "<title>Layout</title><link rel='stylesheet' charset='utf-8' type='text/css' href='stylesheet2.css' /></head>";
 		echo "<div class = 'center' ><body>\n";
 		echo "<form method='post' action='create.php' >";
 		

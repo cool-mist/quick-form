@@ -1,9 +1,19 @@
 body{
 	background-image: url('img/back.jpg') ;
-}#header{
+}
+
+span{
+	text-align: center;
+	border-radius:5px;
+	border:1px solid grey;
+	background-color: lightgrey;
+	color:grey
+}
+#header{
 	height:30%;
 	width: 100%;
-}.center{
+}
+.center{
 	margin:auto;
 	border-radius:25px;
 	width:50em;

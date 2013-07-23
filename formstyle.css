@@ -1,3 +1,6 @@
+h4{
+	text-align: center;
+}
 label{
 	float:left;
 	width:10em;
@@ -5,14 +8,17 @@ label{
 }
 #form{
 	border:1px solid black;
+	color: antiquewhite;
 	border-radius:30px;
 	margin:0 auto;
 	width:500px;
-
 }
 input{
 	text-align: center;
 	border-radius:25px;
+}
+.vsub{
+	visibility: visible;
 }
 input[type='submit']{
 	width:15em;
@@ -25,4 +31,11 @@ textarea{
 select{
 	text-align: center;
 	border-radius:25px;
+}
+button{
+	color: black;
+	background-color: gray;
+	border-radius:5px;
+	width: 5em;
+	margin-left: 50%;
 }

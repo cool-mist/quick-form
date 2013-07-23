@@ -8,10 +8,18 @@ body{
 	width:10em;
 	text-align: right;
 }
+span{
+	text-align: center;
+	border-radius:5px;
+	border:1px solid grey;
+	background-color: lightgrey;
+	color:grey
+}
+
 h1{
 color:gray;
 text-shadow:0px 1px 0px lightgray;}
-a{
+#ret{
 	font-size: 20px;
 	text-decoration : none;
 	color: orange;

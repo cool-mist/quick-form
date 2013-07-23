@@ -1,14 +1,17 @@
 <?php
+	include 'access.php';
+	
 	
 ?>
 <html>
 	
 	<head><title>Form Builder</title>
+	<?php include 'bar.php'; ?>
 	<link rel="stylesheet" charset="utf-8" type="text/css" href="stylesheet.css" />
 	<script type="text/javascript" src='jquery.js' ></script>
 	<script type="text/javascript" src="indexjs.js" ></script>
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-  	<img src='img/header.jpg' id='header'/><br />	
+  		
 	</head>
 	
 	<body>
@@ -98,7 +101,7 @@
 						
 			<br /><span class="error" id="zero">Quantity <b>MUST</b> Be Greater than 0 </span><br />
 			<br /><span class="error" id="one" >Select atleast one field</span><br /><br />
-			<input type = "submit" id="submit" name="submit" value='GO --> '/>
+			<input type = "submit" id="submit" name="submit" value='GO --> '/><img src="img/30.gif" id="loading" />
 			
 			
 		

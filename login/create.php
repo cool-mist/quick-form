@@ -1,5 +1,5 @@
 <?php
-	
+	include 'access.php';
 	$order = $_POST['order'];
 	$f=$_POST['formdata'];
 	$rowata=$_POST['data'];
@@ -108,7 +108,10 @@
 
 )*/
 	ob_start();
-	echo "<html><head><title></title><link rel='stylesheet' charset='utf-8' type='text/css' href='formcss.css' />  	<img src='img/header.jpg' id='header'/>	</head>\n\n";
+	echo "<html><head>";
+	include 'bar.php';
+	echo "<title>Finish</title><link rel='stylesheet' charset='utf-8' type='text/css' href='formcss.css' /></head>\n\n";
+	
 	echo "<body><div id='form'>\n\n";
 	echo "<form action=\"\" method=\"\" >\n\n";
 	foreach($form as $a=>$input){
@@ -158,7 +161,7 @@
 	$end = strpos($html,"</div>");
 	$start = strpos($html,"<div");
 	$html=substr($html, $start,($end-$start+7));
-	echo "<br /><a href='index.php' ><<< Return to Home Page to create a New form!</a><br /><div id='op'><h1>Source Code</h1><form action='download.php' method = 'post' ><button name='Download CSS' >Download CSS</button></form><br />";
+	echo "<br /><a id='ret' href='index.php' ><<< Return to Home Page to create a New form!</a><br /><div id='op'><h1>Source Code</h1><form action='download.php' method = 'post' ><button name='Download CSS' >Download CSS</button></form><br />";
 	echo "<textarea id='html' readonly onclick='this.focus();this.select()'>".htmlspecialchars($html)."</textarea>";
 	echo  "</div>";
 	

@@ -1,0 +1,29 @@
+.bar{
+	width: 100%;
+	background-color: lightblue;
+	
+}
+.panel{
+	margin-left: 10%;
+	float left;
+	border-top: thin;
+	border-bottom: thin;
+	border-radius:0px;
+	color: black;
+}
+a{text-decoration: none; color: black;}
+a:visited{text-decoration: none; color: black;}
+a:link{text-decoration: none; color: black;}
+a:active{text-decoration: none; color: black;}
+
+#welcome{background-color: gray; transition: background-color 2s; -webkit-transition: background-color 1s;}
+#home{background-color: gray; transition: background-color 2s; -webkit-transition: background-color 1s;}
+#change{background-color: gray; transition: background-color 2s; -webkit-transition: background-color 1s;}
+#logout{background-color: gray; transition: background-color 2s; -webkit-transition: background-color 1s;}
+#recent{background-color: gray; transition: background-color 2s; -webkit-transition: background-color 1s;}
+
+#welcome:hover{background-color: green;}
+#home:hover{background-color: green;}
+#change:hover{background-color: yellow;}
+#logout:hover{background-color: red;}
+#recent:hover{background-color: yellow;}
